@@ -1,16 +1,37 @@
 <template>
   <div id="app">
     <section class="hero is-medium">      
-      <nav class="tabs is-centered" aria-label="breadcrumbs">
+      <nav class="tabs is-centered is-size-4" aria-label="breadcrumbs">
         <ul>
-          <li><router-link to="/">Početna</router-link></li>
-          <li><router-link to="/o-nama">Galerija</router-link></li>
-          <li><a href="#">Lokacija</a></li>
-          <li ><a href="#">Kontakt</a></li>
+          <li><router-link to="/"  class="has-text-white">Početna</router-link></li>
+          <li><router-link to="/galerija"  class="has-text-white">Galerija</router-link></li>
+          <li><router-link to="/lokacija"  class="has-text-white">Lokacija</router-link></li>
+          <li ><router-link to="/kontakt"  class="has-text-white">Kontakt</router-link></li>
         </ul>
       </nav>
     </section>
     <router-view/>
+    <section class="footer is-medium has-background-grey-dark">
+      <div class="container">
+        <div class="columns">
+          <div class="column has-text-left has-text-info">
+            <p>Adresa</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="column">
+          </div>
+          <div class="column">
+          </div>
+          <div class="column has-text-right has-text-info">
+            <p>Kontakt</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <button>social media</button>
+          </div>
+        </div>
+        <hr>
+        copyright
+      </div>
+    </section>
   </div>
 </template>
 
@@ -31,7 +52,7 @@ body.home {
         background-color: #999;
     }
 nav {
-  margin-top: 20px;
+  margin-top: 40px;
 }  
 
 
@@ -41,6 +62,9 @@ nav li {
 }
 
 nav a.router-link-exact-active {
-  color: #4254b9;
+  background-color: #5590cc;
+}
+footer {
+  padding-top:100px;
 }
 </style>
