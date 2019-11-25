@@ -1,0 +1,41 @@
+$crvena : #C60021;
+$tamnija : #E3E3E3;
+$svjetlija : #F6F6F8;
+#app {
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+}
+.bg {
+	background-image: url("assets/pozadina.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: $tamnija;
+}
+nav {
+	margin-top: 40px;
+	li {
+		font-weight: bold;
+	}
+	a.router-link-exact-active {
+		background-color: $crvena;
+	}
+}
+footer {
+	padding-top: 100px;
+}
+.red {
+	background-color: $crvena;
+}
+.redText {
+	color: $crvena !important;
+}
+.tamnija {
+	background-color: $tamnija !important;
+}
+.svjetlija {
+	background-color: $svjetlija;
+}
