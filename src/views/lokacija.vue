@@ -13,10 +13,12 @@
                     <area alt="Porec" title="Porec" coords="1133,1137,1300,1295" shape="rect" @mouseover="porec = true" @mouseleave="rporec= false">
                     <area alt="Buzet" title="Buzet" coords="1792,640,1993,798" shape="rect" @mouseover="buzet = true" @mouseleave="buzet = false">
                 </map>
-                <!--<div v-for="grad in gradovi" :key="grad" v-if="grad == true">
-                    <p>Klikni za dobit rutu {{grad}} - Tinjan !</p>
-                    <p><small>Bit ćete preusmjereni na Google Maps</small></p>
-                </div>-->
+                <div v-for="grad in gradovi" :key="grad.id">
+                    <template v-if="grad">
+                        <p>Klikni za dobit rutu {{grad}} - Tinjan !</p>
+                        <p><small>Bit ćete preusmjereni na Google Maps</small></p>
+                    </template>
+                </div>
             </div>
         </div>
     </div>
