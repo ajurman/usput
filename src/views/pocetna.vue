@@ -1,59 +1,199 @@
 <template>
     <div>
-        <article class="full">
-            <div>
-               <video autoplay="true" loop="true" muted src="../assets/trimmed.mp4"></video>
-            </div>
-            <div class="columns iza">
-                <div class="has-text-left is-full column">
-                    <h2 class="subtitle redText">
-                    GASTRONOMSKU TRADICIJU PRETVORILI SMO U NAŠIROKO POZNAT DOGAĐAJ
-                    </h2>
-                    <h1 class="title  has-text-light">
-                        PRŠUT – ZAŠTITNI ZNAK OPĆINE TINJAN
-                    </h1>
+        <header>
+            <nav class="tabs is-centered is-size-4" aria-label="breadcrumbs">
+                    <ul>
+                    <li><router-link to="/"  class="has-text-white">Početna</router-link></li>
+                    <li><router-link to="/galerija"  class="has-text-white">Galerija</router-link></li>
+                    <li><router-link to="/lokacija"  class="has-text-white">Lokacija</router-link></li>
+                    <li ><router-link to="/kontakt"  class="has-text-white">Kontakt</router-link></li>
+                    </ul>
+                </nav>  
+            <div class="header"> 
+                <div id="overlay"></div>
+                <div id="naslov">
+                    <h1 class="title">PRŠUT – ZAŠTITNI ZNAK OPĆINE TINJAN</h1>
+                    <h2 class="subtitle has-text-white">GASTRONOMSKU TRADICIJU PRETVORILI SMO U NAŠIROKO POZNAT DOGAĐAJ</h2>
                 </div>
-                
+                <video autoplay loop muted class="video-background" >
+                    <source src="../assets/trimmed.mp4" type="video/mp4">
+                </video>
+
             </div>
-        </article>
-            <article class="hero-body svjetlija skew ssnap">
-                
+        </header>
+        <main>
+
+
+
+            <section class="vh-100">
                 <div class="container">
-                    <h3 class="title">Internacionalni sajam pršuta</h3>
-                    <div class="columns is-mobile">
+                    <div class="columns is-8 is-variable">
                         <div class="column">
-                            <div class="notification">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quasi perferendis culpa atque sed voluptatibus unde animi laudantium deleniti ipsam totam doloribus qui architecto, nostrum provident quaerat odio! Doloribus, consequatur?</div>
-                            <figure class="image">
-                                <img src="https://erickson.edu/sites/default/files/Erickson%20Badges%20Banner.png">
-                            </figure>
-                        </div>
+                            <div class="vh-50 slika-text">
+                                <div class="text-slika">
+                                    <h4>Što je ISAP?</h4>
+                                    <button class="button is-large">Saznaj više</button>
+
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="column">
+                            <div class="vh-50 slika-text">
+                                <div class="text-slika">
+                                    <h4>Zašto pršut?</h4>
+                                    <button class="button is-large">Saznaj više</button>
+                                </div>
+                            </div>
+                        </div>   
+                        
                     </div>
-                    <div class="has-background-white">
-                        <div class="red">
-                            <h4 class="has-background-white">POKROVITELJI I POTPORE</h4>
+                </div>
+                <div class="container has-text-centered vh-50">
+                    <h3>ISAP 2019. u brojkama</h3>
+                    <div class="level">
+                        <div class="level-item has-text-centered">
+                            <div>
+                            <p class="heading">Po redu</p>
+                            <p class="title redText">13.</p>
+                            </div>
                         </div>
-                        <div class="columns is-mobile">
-                                <div class="column"><img src="../assets/JPEG/sponzor1.jpg" alt="GhiaStaff"></div>
-                                <div class="column"><img src="../assets/JPEG/sponzor2.jpg" alt="Rudan"></div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                            <p class="heading">Pršuta pojedeno u tonama</p>
+                            <p class="title redText">20+</p>
+                            </div>
                         </div>
-                        <div class="columns is-mobile">
-                                <div class="column"><img src="../assets/JPEG/potpore2.jpg" alt="Ministarstco turizma"> </div>
-                                <div class="column"><img src="../assets/JPEG/potpore3.jpg" alt="Ministarstvo poljoprivrede"></div>
-                                <div class="column"><img src="../assets/JPEG/potpore1.jpg" alt="Istra"></div>
-                                <div class="column"><img src="../assets/JPEG/organizator1.jpg" alt="GUSTUS"></div> 
-                                <div class="column"><img src="../assets/JPEG/potpore5.jpg" alt="Središnja Istra"></div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                            <p class="heading">Posjetitelja</p>
+                            <p class="title redText">30.000+</p>
+                            </div>
                         </div>
-                        <div class="columns is-mobile">
-                                <div class="column"><img src="../assets/JPEG/potpore6.jpg" alt="Središnja Istra"></div>    
-                                <div class="column"><img src="../assets/JPEG/potpore4.jpg" alt="Istra"></div>
-                                <div class="column"><img src="../assets/JPEG/organizator2.jpg" alt="Tinjan"></div>
-                                <div class="column"><img src="../assets/JPEG/organizator3.jpg" alt="Istarski Pršut"></div>
-                                <div class="column"><img src="../assets/JPEG/organizator4.jpg" alt="Merikane"></div>  
+                        <div class="level-item has-text-centered">
+                            <div>
+                            <p class="heading">Natjecatelja</p>
+                            <p class="title redText">81</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </article>
+            </section>
+
+
+
+
+            <section class="vh-100">
+                <article class="hero-body svjetlija">  
+                    <div class="container">
+                        <h5 class="title">Internacionalni sajam pršuta</h5>
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <div class="notification">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quasi perferendis culpa atque sed voluptatibus unde animi laudantium deleniti ipsam totam doloribus qui architecto, nostrum provident quaerat odio! Doloribus, consequatur?</div>
+                                <figure class="image">
+                                    <img src="https://erickson.edu/sites/default/files/Erickson%20Badges%20Banner.png">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="has-background-white">
+                            <div class="red">
+                                <h4 class="has-background-white">POKROVITELJI I POTPORE</h4>
+                            </div>
+                            <div class="columns is-mobile">
+                                    <div class="column"><img src="../assets/JPEG/sponzor1.jpg" alt="GhiaStaff"></div>
+                                    <div class="column"><img src="../assets/JPEG/sponzor2.jpg" alt="Rudan"></div>
+                            </div>
+                            <div class="columns is-mobile">
+                                    <div class="column"><img src="../assets/JPEG/potpore2.jpg" alt="Ministarstco turizma"> </div>
+                                    <div class="column"><img src="../assets/JPEG/potpore3.jpg" alt="Ministarstvo poljoprivrede"></div>
+                                    <div class="column"><img src="../assets/JPEG/potpore1.jpg" alt="Istra"></div>
+                                    <div class="column"><img src="../assets/JPEG/organizator1.jpg" alt="GUSTUS"></div> 
+                                    <div class="column"><img src="../assets/JPEG/potpore5.jpg" alt="Središnja Istra"></div>
+                            </div>
+                            <div class="columns is-mobile">
+                                    <div class="column"><img src="../assets/JPEG/potpore6.jpg" alt="Središnja Istra"></div>    
+                                    <div class="column"><img src="../assets/JPEG/potpore4.jpg" alt="Istra"></div>
+                                    <div class="column"><img src="../assets/JPEG/organizator2.jpg" alt="Tinjan"></div>
+                                    <div class="column"><img src="../assets/JPEG/organizator3.jpg" alt="Istarski Pršut"></div>
+                                    <div class="column"><img src="../assets/JPEG/organizator4.jpg" alt="Merikane"></div>  
+                            </div>
+                            
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
     </div>
+
+
+
+
+    <!--<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/B3WyqnjHq_b/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:440px; min-width:226px; padding:0;  width:100%;">
+                            <div style="padding:16px;"> 
+                                    <a href="https://www.instagram.com/p/B3WyqnjHq_b/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> 
+                                        <div style=" display: flex; flex-direction: row; align-items: center;">
+                                            <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                            </div> 
+                                            <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                                </div>
+                                                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 19% 0;">
+                                        </div>
+                                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                            <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-511.000000, -20.000000)" fill="#000000"><g>
+                                                        <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                        </path>
+                                                    </g>
+                                                </g></g></svg>
+                                        </div>
+                                        <div style="padding-top: 8px;">
+                                            <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> Pogledajte ovu objavu na Instagramu.
+                                                </div>
+                                            </div>
+                                            <div style="padding: 12.5% 0;">
+                                            </div>
+                                            <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                                <div>
+                                                    <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                                    </div>
+                                                    <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                                    </div>
+                                                    <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                                    </div>
+                                                </div>
+                                                <div style="margin-left: 8px;">
+                                                    <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                                    </div>
+                                                    <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                                    </div>
+                                                </div>
+                                                <div style="margin-left: auto;">
+                                                    <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                                    </div>
+                                                    <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                                                </div>
+                                                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                                                </div>
+                                            </div>
+                                    </a>
+                                        <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                            <a href="https://www.instagram.com/p/B3WyqnjHq_b/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Objavu dijeli Experience Istria (@experience_istria)
+                                            </a>
+                                            <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2019-10-08T11:48:56+00:00">Lis 8, 2019 u 4:48 PDT
+                                            </time>
+                                         </p>
+                            </div>
+                        </blockquote>-->
 </template>
 
 <script>
@@ -63,31 +203,25 @@ export default {
 </script>
 
 <style scoped>
-    .iza {
-       position: absolute;
-       bottom:15vh;
-       left:5vw;
-    }
-    article:nth-child(1) {
-        text-align: left;
-
-    }
-    article:nth-child(2) {
-        margin-top: 100px;
-    }
-    hr {    padding-bottom: 80px;}
-    h3,.column>p {
-        padding: 25px;
-    
-    }
-    h4 {
-        display:inline-block;
+    h3{
+        padding: 7rem 0 10rem;
+        font-size: 2.5rem;
     }
     .skew { 
-        clip-path: polygon(0 26%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
     }
     img {
          filter: grayscale(100%);
     }
-    
+    nav {
+        position: absolute;
+        left:0;
+        right:0;
+    }
+    .vh-100{
+        height:100vh;
+    }
+    .vh-50 {
+    height: 50vh;
+    }
 </style>
