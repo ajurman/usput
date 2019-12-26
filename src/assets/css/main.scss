@@ -5,25 +5,16 @@ $svjetlija : rgb(199, 199, 199);
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	scroll-snap-type: y mandatory;
-	overflow-y:scroll;
 	background-color: $tamnija;
-}
-.bg {
-	background-image: url("assets/pozadina.jpg");
-	background-position: 50% 30%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-
+	position: relative;
+	color:white;
+	
 }
 nav {
-	
+	padding-top: 1em;
+	z-index: 13;
 	li {
 		font-weight: bold;
-	}
-	a.router-link-exact-active {
-		background-color: $crvena;
 	}
 }
 footer {
@@ -35,37 +26,101 @@ footer {
 .redText {
 	color: $crvena !important;
 }
-.tamnija {
-	background-image: url("assets/patt.jpg");
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
 .svjetlija {
 	background-color: $svjetlija;
 }
-.ssnap {
-	scroll-snap-align: start;
-}
-.full{
-	div {
-		position: absolute;
-		top:0;
-		left:0;
-		width:100%;
-		height:100%;
-		overflow: hidden;
-	}
-	height: 100vh;
-	display:flex;
-	align-items: center;
-	max-width: 960px;
-	margin: auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	video {
-		min-width: 100%;
-		min-height: 100%;;
-	}
-}	
 
+.header {
+	height: 100vh;
+	background: rgba(0, 0, 100, 0.3);
+	z-index: 3;
+	position: relative;
+	display: flex;
+	section{
+		margin-top: 10vw;
+		margin-left: 3rem;
+	}
+}
+
+.video-background{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+@media (min-aspect-ratio:16/9)
+{
+	.video-background
+	{
+		width: 100%;
+		height: auto;
+	}
+}
+@media (max-aspect-ratio:16/9)
+{
+	.video-background
+	{
+		height: 100%;
+		width: auto;
+	}
+}
+#overlay {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.55);
+	position: absolute;
+	z-index: 10;
+}
+#naslov {
+	z-index:20;
+	position: absolute;
+	bottom: 25vh;
+	left:10vw;
+	h1 {
+		color:$crvena;
+	}
+}
+blockquote{
+	width:50%;
+}
+.slika-text {
+	background-image:url("assets/JPEG/isap.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+  }
+.is-8 .column:nth-child(2) .slika-text{
+	background-image:url("assets/JPEG/isap_prsut.jpg");
+}
+.text-slika {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left:0;
+	height: 0;
+	text-align: center;   
+	font-size: 3rem;
+	background: rgba(0, 0, 0, 0.7);
+	transition: height 0.7s ease-out;
+	h4{
+		line-height: 0;
+		}
+	button {
+		margin-top: 15%;
+		opacity: 0;
+		transition: opacity 0.2s ease-in 0.2s;
+	}
+}
+
+.slika-text:hover > .text-slika {
+	height: 50%;
+}
+.slika-text:hover > .text-slika button {
+	opacity:1;
+}
+
+  
