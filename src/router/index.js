@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Pocetna from '../views/pocetna.vue'
 import galerija from '../views/galerija.vue'
 import lokacija from '../views/lokacija.vue'
+import kontakt from '../views/kontakt.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/lokacija',
     name: 'lokacija',
     component: lokacija
+  },
+  {
+    path: '/kontakt',
+    name: 'kontakt',
+    component: kontakt
   }
 ]
 
