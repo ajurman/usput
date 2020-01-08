@@ -14,8 +14,4 @@
 </template>
 
 <style scoped>
-body.home { 
-  background-image: url("https://www.croatiaweek.com/wp-content/uploads/2019/10/04.jpg") ;
-}
-
 </style>
