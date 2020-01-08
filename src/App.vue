@@ -1,15 +1,26 @@
 <template>
   <div id="app">
-    <nav 
-      v-if="['galerija', 'lokacija', 'kontakt'].indexOf($route.name) > -1" 
-      class="tabs is-centered is-size-4" aria-label="breadcrumbs">
-        <ul>
-      <li><router-link to="/"  class="has-text-white">Početna</router-link></li>
-      <li><router-link to="/galerija"  class="has-text-white">Galerija</router-link></li>
-      <li><router-link to="/lokacija"  class="has-text-white">Lokacija</router-link></li>
-      <li ><router-link to="/kontakt"  class="has-text-white">Kontakt</router-link></li>
-        </ul>
-    </nav>
+    <div  v-if="['galerija', 'lokacija', 'kontakt'].indexOf($route.name) > -1" 
+      class="navbar-wrap">
+      <div class="navbar-brand">
+        <router-link to="/" class="navbar-item">
+          <img src="logo.png" alt="logo">
+        </router-link>
+      </div>
+      <nav class="tabs is-centered is-size-4" aria-label="breadcrumbs">
+          <ul>
+        <li><router-link to="/"  class="has-text-white nav-link">Početna</router-link></li>
+        <li><router-link to="/galerija"  class="has-text-white nav-link">Galerija</router-link></li>
+        <li><router-link to="/lokacija"  class="has-text-white nav-link">Lokacija</router-link></li>
+        <li ><router-link to="/kontakt"  class="has-text-white nav-link" >Kontakt</router-link></li>
+          </ul>
+      </nav>
+      <div class="navbar-cta">
+        <router-link to="/lokacija" class="navbar-item">
+          <button class="cta button is-medium">POSJETI ISAP</button>
+        </router-link>
+      </div>
+    </div>
       <router-view/>
       <section class="footer is-medium">
         <div class="container">
@@ -36,7 +47,7 @@
 </template>
 
 <style lang="scss">
-@import "assets/css/main.scss";
+@import "assets/scss/main.scss";
 
 </style>
 <script>
