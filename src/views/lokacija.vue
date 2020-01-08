@@ -1,42 +1,45 @@
 <template>
     <div>
-        <div class="columns">
-            <div class="column"></div>
-            <div class="column">
-                <img src="../assets/Untitled-1.png" usemap="#image_map">
-                <map name="image_map">
-                    <area alt="Rijeka" title="Rijeka" coords="2958,483,3341,688" shape="rect" @mouseover="rijeka = true" @mouseleave="rijeka = false">
-                    <area alt="Pula" title="Pula" coords="2179,1768,2423,2017" shape="rect" @mouseover="pula = true" @mouseleave="pula = false">
-                    <area alt="Pazin" title="Pazin" coords="1897,1080,2050,1228" shape="rect" @mouseover="pazin = true" @mouseleave="pazin = false">
-                    <area alt="Koper" title="Koper" coords="1042,554,1204,679" shape="rect" @mouseover="koper = true" @mouseleave="koper = false">
-                    <area alt="Novigrad" title="Novigrad" coords="965,913,1128,1018" shape="rect" @mouseover="novigrad = true" @mouseleave="novigrad = false">
-                    <area alt="Porec" title="Porec" coords="1133,1137,1300,1295" shape="rect" @mouseover="porec = true" @mouseleave="rporec= false">
-                    <area alt="Buzet" title="Buzet" coords="1792,640,1993,798" shape="rect" @mouseover="buzet = true" @mouseleave="buzet = false">
-                </map>
-                <div v-for="grad in gradovi" :key="grad.id">
-                    <template v-if="grad">
-                        <p>Klikni za dobit rutu {{grad}} - Tinjan !</p>
-                        <p><small>Bit ćete preusmjereni na Google Maps</small></p>
-                    </template>
-                </div>
-            </div>
+        <div>
+            <h1>Google Maps Demo</h1>
+
+            <GmapMap
+            :center="center"
+            :zoom="9"
+            >
+            <GmapMarker
+                :key="index"
+                v-for="(m, index) in markers"
+                :position="m.position"
+                :clickable="true"
+            />
+            </GmapMap>
+        </div>
+        <div>
+            <h2>O općini</h2>
+            <p>Općina Tinjan nalazi se u centralnom dijelu središnje Istre, na prostoru zapadne strane Drage.Tinjan ponosno čuva svoju povijest i tradiciju, bilo da je riječ o simbolima ovog kraja, kamenom suhozidu i lokvama te kosirima i rankunima, folklornom i graditeljskom nasljeđu, predaji i legendama ili pak o vrhunskim gastronomskim delicijama poput istarskog pršuta. Za očuvanje tradicije proizvodnje vrhunskog pršuta na Tinjanštini danas je zaslužno nekoliko registriranih pršutana, a 2006. godine Tinjan je proglašen Općinom istarskog pršuta. </p>
+            
         </div>
     </div>
 </template>
 <script>
 export default {
-    computed: {
-        gradovi: [
-            {rijeka:false},
-            {pula:false},
-            {pazin:false},
-            {koper:false},
-            {novigrad:false},
-            {porec:false},
-            {buzet:false}
-        ]
-    }
-    
-    
+    data() {
+        return {
+            center: { lat: 45.217, lng: 13.839 },
+            markers : [
+                {
+                    position: { lat: 45.2176, lng: 13.8369 }
+                }
+            ]
+        }
+    }    
 }
 </script>
+<style lang="scss" scoped>
+.vue-map-container {
+  height: 450px;
+  max-width: 992px;
+  width: 100%;
+}
+</style>
