@@ -1,4 +1,4 @@
-$crvena : #6C331F;
+$crvena : #fd1c15;
 $tamnija : rgb(49, 49, 49);
 $svjetlija : rgb(199, 199, 199);
 
@@ -11,16 +11,46 @@ $svjetlija : rgb(199, 199, 199);
 	color:white;
 	
 }
+
+.hr{
+	border: 1px solid red;
+}
+.v-centar{
+	position: absolute;
+	top:55%;
+	margin-left: 10vw;
+}
 .cta {
-	background-color: crimson !important;
-	color:white !important;
+	z-index: 132;
+	margin-top: 34px;
+	margin-right: 34px;
+	position: relative;
+	color: white !important;
+	width: 156px;
+	height: 64px;
+	line-height: 64px;
+	transition-duration: 0.3s;
+	transition-property: transform;
+	-webkit-tap-highlight-color: transparent;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	background-color: rgb(253, 29, 21) !important;
+  }
+.cta:hover {
+	transform: scale(1.1);
+}
+.sponzori h4{
+	font-size:2.5rem;
+	padding:5rem;
+}
+.drugi{
+	padding-top: 5rem;
 }
 .vh-100{
 	height:100vh;
 }
 .vh-50 {
 height: 40vh;
-
 }
 
 .pomoc{
@@ -33,8 +63,8 @@ height: 40vh;
 .redText {
 	color: $crvena !important;
 }
-.svjetlija {
-	background-color: $svjetlija;
+.bg-tamna{
+	background-color: $tamnija !important;
 }
 
 //POČETNA
@@ -67,7 +97,7 @@ video {
 	right: 0;
 	left:0;
 	text-align: center;   
-	font-size: 3rem;
+	font-size: 3rem !important;
 	background: rgba(0, 0, 0, 0.7);
 	h4{
 		line-height: 0;
@@ -76,25 +106,19 @@ video {
 		margin-top: 15%;
 	}
 }
-@media(max-width:769px){
-	.text-slika {
-		height: 50%;
-	}
-	video,#overlay {
-		display: none;
-	}
-}
 
 
 .heading{
-	font-size: 1.5rem !important;
-	.title{
-		font-size: 1.25rem !important;
-	}
+	font-size: 2.5rem !important;
+	padding:3rem;
+}
+.title {
+	
+	font-size: 4rem !important;
 }
 
 main{
-	padding-top: 0rem;
+	font-family: 'Montserrat', serif;
 	z-index: 120;
 	background-color: $tamnija;
 }
@@ -110,17 +134,52 @@ main{
 	background: $crvena;
 	z-index: 121;
 }
-
+.is-vertical-center {
+	display: flex;
+	align-items: center;
+  }
 
 //DESKTOP
 
 @media(min-width:769px){
 	//Sto je isap
-	main h3{
-        padding: 17rem 0 5rem;
-    }
+	#gradient{
+		
+		position: absolute;
+		left: 0;
+		right:0;
+		top: 0;
+		bottom:0;
+		z-index: 13;
+		background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+	}
+	.probajte {
+		background-image:url("assets/JPEG/prsutcta.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		position: relative;
+		width:100vw;
+		height:40vh;
+	}
+	#probajte {
+		position: absolute;
+		line-height: 40vh;
+		font-size: 4rem;
+		z-index: 14;
+		margin-left: 10vw;
+	}
+	.mdi {
+		font-size: 148px;
+	}
+	#brojke{
+		padding:20rem 0;
+		font-size: 8rem;
+	}
+
 	.is-1-mobile{
-		padding-bottom: 5rem;
+		padding-bottom: 15rem;
 	}
 	.vh-50 {
 		height: 40vh;
@@ -128,7 +187,7 @@ main{
 		}
 
 	main{
-		padding-top: 5rem;
+		padding: 15rem 0 0;
 	}
 	.text-slika {
 		height: 0;
@@ -218,6 +277,8 @@ main{
 	}
 	.navbar-wrap{
 		position: relative;
+		background-color: $tamnija;
+		padding-bottom: 1rem;
 	}
 
 	//POČETNA
@@ -243,8 +304,15 @@ main{
 		position: absolute;
 		left:5%;
 		bottom:15%;
+		padding-right: 5rem;
 		h1 {
 			color:$crvena;
+			font-size: 4rem;
+			font-family: "Montserrat" "bold";
+		}
+		h2 {
+			font-size: 2rem;
+			font-family: "Arial";
 		}
 	}
 	#overlay {
@@ -267,6 +335,14 @@ main{
         }
     }
 }
+@media(max-width:769px){
+	.text-slika {
+		height: 50%;
+	}
+	video,#overlay {
+		display: none;
+	}
+}
 
 //VIDEO FIX
 @media (min-aspect-ratio:16/9)
@@ -286,3 +362,64 @@ main{
 		width: auto;
 	}
 }
+
+
+//modal
+
+.modal {
+	color:black;
+  }
+  .modal img{
+	width:100%;
+  }
+  .modal-content {
+	overflow-x: hidden !important;
+  }
+  .modal .is-size-4{
+	padding:0rem 10rem ;
+	margin-top: 4rem;
+	
+  }
+  .modal .column{
+	position: relative;
+  }
+  .naslov-modal{
+	text-align: center;
+	background-color: white;
+	padding: 4.5rem;
+	padding-bottom: 0;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	right:0;
+	clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0% 100%);
+  
+  }
+  .modal .columns{
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 100%);
+  }
+  @media (max-width: 769px) {
+	.naslov-modal{
+	  position: relative;
+	  clip-path: none;
+	  padding:1rem;
+	}
+	.modal .is-size-4{
+	  margin-top: 1rem;
+	  padding:0rem 2rem;
+	}
+	
+  }
+  .modal p::first-letter{
+	font-size: 4rem;
+	line-height: 0;
+	color: crimson;
+  }
+  .modal .cta{
+	float: right;
+  }
+  @media(min-width:815px){ 
+	 .text-slika {
+		 font-size: 5rem !important;
+	 }
+	}
