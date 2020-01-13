@@ -8,23 +8,23 @@
             </div>
             <nav class="tabs is-centered is-size-4" aria-label="breadcrumbs">
                     <ul>
-                    <li><router-link to="/"  class="has-text-white nav-link">Početna</router-link></li>
-                    <li><router-link to="/galerija"  class="has-text-white nav-link">Galerija</router-link></li>
-                    <li><router-link to="/lokacija"  class="has-text-white nav-link">Lokacija</router-link></li>
-                    <li ><router-link to="/kontakt"  class="has-text-white nav-link">Kontakt</router-link></li>
+                    <li><router-link to="/"  class="has-text-white is-size-2 nav-link">Početna</router-link></li>
+                    <li><router-link to="/galerija"  class="has-text-white is-size-2 nav-link">Galerija</router-link></li>
+                    <li><router-link to="/lokacija"  class="has-text-white is-size-2 nav-link">Lokacija</router-link></li>
+                    <li ><router-link to="/kontakt"  class="has-text-white is-size-2 nav-link">Kontakt</router-link></li>
                     </ul>
                 </nav>
             <div class="navbar-cta">
-                <router-link to="/lokacija" class="navbar-item">
-                <button class="cta button is-medium">POSJETI ISAP</button>
+                <router-link to="/lokacija">
+                    <button class="cta button is-medium">POSJETI ISAP</button>
                 </router-link>
             </div>
             <div class="header"> 
                 <img src="../assets/pozadina.jpg" id="pozadina-slika">
                 <div id="overlay"></div>
                 <div id="naslov">
-                    <h1 class="title">PRŠUT – ZAŠTITNI ZNAK OPĆINE TINJAN</h1>
-                    <h2 class="subtitle has-text-white">GASTRONOMSKU TRADICIJU PRETVORILI SMO U NAŠIROKO POZNAT DOGAĐAJ</h2>
+                    <h1 >PRŠUT – ZAŠTITNI ZNAK OPĆINE TINJAN</h1>
+                    <h2 class="has-text-white">GASTRONOMSKU TRADICIJU PRETVORILI SMO U NAŠIROKO POZNAT DOGAĐAJ</h2>
                 </div>
                 <video autoplay loop muted class="video-background" >
                     <source src="../assets/trimmed.mp4" type="video/mp4">
@@ -33,8 +33,8 @@
             </div>
             <div id="bocno">
                 <span>TINJAN | 18.-20.10.2019.</span>
-                <a href="">FB</a>
-                <a href="">IG</a>
+                <a href="" class="redText">FB</a>
+                <a href="" class="redText">IG</a>
             </div>
             
         </header>
@@ -45,12 +45,13 @@
 
             <section>
                 <div>
+                    
                     <div class="columns is-variable is-0">
                         <div class="column">
                             <div class="vh-50 pomoc slika-text">
                                 <div class="text-slika">
                                     <h4>Što je ISAP?</h4>
-                                    <button class="button is-large">Saznaj više</button>
+                                    <button class="button cta is-large" @click="show = !show; prvaSlika()">Saznaj više</button>
 
                                 </div>
                             </div>
@@ -59,20 +60,20 @@
                             <div class="vh-50 slika-text">
                                 <div class="text-slika">
                                     <h4>Zašto pršut?</h4>
-                                    <button class="button is-large">Saznaj više</button>
+                                    <button class="button cta is-large"  @click="show = !show; drugaSlika()">Saznaj više</button>
                                 </div>
                             </div>
                         </div>   
                         
                     </div>
                 </div>
-                <div class="has-text-centered">
-                    <h3 class="is-size-1">ISAP 2019. u brojkama</h3>
+                <div class="grad1 has-text-centered">
+                    <h3 id="brojke"><hr class="hr">ISAP 2019. u brojkama</h3>
                     <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
                         <div class="brojevi column has-text-centered ">
                             <div>
                                 <span class="icon is-large">
-                                    <i class="mdi mdi-48px mdi-format-list-numbered "></i>
+                                    <i class="mdi mdi-format-list-numbered "></i>
                                 </span>
                                 <p class="heading">Po redu</p>
                                 <p class="title redText">13.</p>
@@ -81,7 +82,7 @@
                         <div class="brojevi column has-text-centered ">
                             <div>
                                 <span class="icon is-large">
-                                    <i class="mdi mdi-48px mdi-weight-kilogram"></i>
+                                    <i class="mdi mdi-weight-kilogram"></i>
                                 </span>
                                 <p class="heading">Pršuta pojedeno u tonama</p>
                                 <p class="title redText">20+</p>
@@ -92,7 +93,7 @@
                          <div class="brojevi column has-text-centered ">
                             <div>
                                 <span class="icon is-large">
-                                    <i class="mdi mdi-48px mdi-account-group"></i>
+                                    <i class="mdi mdi-account-group"></i>
                                 </span>
                                 <p class="heading">Posjetitelja</p>
                                 <p class="title redText">30.000+</p>
@@ -101,7 +102,7 @@
                         <div class="brojevi column has-text-centered ">
                             <div>
                                 <span class="icon is-large">
-                                    <i class="mdi mdi-48px mdi-account-badge"></i>
+                                    <i class="mdi mdi-account-badge"></i>
                                 </span>
                                 <p class="heading">Natjecatelja</p>
                                 <p class="title redText">81</p>
@@ -110,106 +111,123 @@
                     </div>
                 </div>
             </section>
-
-<template>
-    <modal name="modalPrvi"
-        transition="nice-modal-fade"
-        min-width="768"
-        :pivot-y="0.5"
-        :adaptive="true"
-        :scrollable="true"
-        width="80%"
-        height="auto">
-      <div class="size-modal-content has-text-black">
-        <h5>{{naslov}}</h5>
-        <img id="modal-slika" v-bind:src= "slika" >
-        <div>
-          {{text}}
-        </div>
-      </div>
-    </modal>
-</template>
-<button @click="show">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</button>
-
             <section>
-                <article class="hero-body svjetlija">  
-                    <div class="container">
-                        <h5 class="title">Internacionalni sajam pršuta</h5>
-                        <div class="columns is-mobile">
-                            <div class="column">
-                                <div class="notification">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quasi perferendis culpa atque sed voluptatibus unde animi laudantium deleniti ipsam totam doloribus qui architecto, nostrum provident quaerat odio! Doloribus, consequatur?</div>
-                                <figure class="image">
-                                    <img src="https://erickson.edu/sites/default/files/Erickson%20Badges%20Banner.png">
-                                </figure>
-                            </div>
+                <article class="bg-tamna">  
+                    <div class="probajte">
+                        <h3 id="probajte">Probajte pršut i Vi</h3>
+                        <div id="gradient"></div>
+                        <div class="v-centar">
+                            <router-link to="/lokacija">
+                                <button class="cta button is-medium">POSJETI ISAP</button>
+                            </router-link>
                         </div>
-                        <div class="has-background-white sponzori">
-                            <div class="red">
-                                <h4 class="has-background-white">POKROVITELJI I POTPORE</h4>
-                            </div>
-                            <div class="columns is-mobile">
+                        
+                    </div>
+                        
+                        
+                        
+                        <div class="container has-background-white sponzori">
+                            <h4 class="has-text-black has-text-centered">SPONZORI</h4>
+                            <div class="columns is-vertical-center is-mobile">
                                     <div class="column"><img src="../assets/JPEG/sponzor1.jpg" alt="GhiaStaff"></div>
                                     <div class="column"><img src="../assets/JPEG/sponzor2.jpg" alt="Rudan"></div>
                             </div>
-                            <div class="columns is-mobile">
+                            <h4 class="has-text-black has-text-centered">POKROVITELJI I POTPORE</h4>
+                            <div class="columns is-mobile is-vertical-center">
                                     <div class="column"><img src="../assets/JPEG/potpore2.jpg" alt="Ministarstco turizma"> </div>
                                     <div class="column"><img src="../assets/JPEG/potpore3.jpg" alt="Ministarstvo poljoprivrede"></div>
-                                    <div class="column"><img src="../assets/JPEG/potpore1.jpg" alt="Istra"></div>
-                                    <div class="column"><img src="../assets/JPEG/organizator1.jpg" alt="GUSTUS"></div> 
-                                    <div class="column"><img src="../assets/JPEG/potpore5.jpg" alt="Središnja Istra"></div>
                             </div>
-                            <div class="columns is-mobile">
-                                    <div class="column"><img src="../assets/JPEG/potpore6.jpg" alt="Središnja Istra"></div>    
-                                    <div class="column"><img src="../assets/JPEG/potpore4.jpg" alt="Istra"></div>
-                                    <div class="column"><img src="../assets/JPEG/organizator2.jpg" alt="Tinjan"></div>
-                                    <div class="column"><img src="../assets/JPEG/organizator3.jpg" alt="Istarski Pršut"></div>
-                                    <div class="column"><img src="../assets/JPEG/organizator4.jpg" alt="Merikane"></div>  
+                            <div class="columns is-mobile drugi is-vertical-center">
+                                <div class="column"><img src="../assets/JPEG/potpore5.jpg" alt="Središnja Istra"></div>
+                                <div class="column"><img src="../assets/JPEG/potpore1.jpg" alt="Istra"></div>
+                                <div class="column"><img src="../assets/JPEG/potpore4.jpg" alt="Istra"></div>
+                            </div>
+                            <h4 class="has-text-black has-text-centered">ORGANIZATORI</h4>
+                            <div class="columns is-mobile is-vertical-center">
+                                <div class="column"><img src="../assets/JPEG/organizator1.jpg" alt="GUSTUS"></div> 
+                                <div class="column"><img src="../assets/JPEG/potpore6.jpg" alt="Središnja Istra"></div>    
+                                <div class="column"><img src="../assets/JPEG/organizator2.jpg" alt="Tinjan"></div>
+                            </div>
+                            <div class="columns is-mobile drugi is-vertical-center">
+                                <div class="column"><img src="../assets/JPEG/organizator3.jpg" alt="Istarski Pršut"></div>
+                                <div class="column"><img src="../assets/JPEG/organizator4.jpg" alt="Merikane"></div>  
                             </div>
                             
                         </div>
-                    </div>
                 </article>
             </section>
         </main>
+        <div class="modal" :class="{ 'is-active':show }">
+            <div class="modal-background" @click="show = !show"></div>
+            <div class="modal-content container">
+            
+            <div class="columns">
+                <div class="column">
+                    <img v-bind:src="slika" >
+                    <div class="naslov-modal is-size-1">{{naslov}}</div>
+                </div>
+                </div>
+                
+            <div class="columns">
+                <div class="column">
+                <div class="is-size-4 is-size-6-mobile">
+                    <p>
+                    {{text1}}<br><br><br>
+                    {{text2}}<br><br><br>
+                    {{text3}}<br><br><br>
+                    </p>
+                    <router-link to="/lokacija">
+                    <button class="is-large cta button" >POSJETI ISAP</button>
+                    </router-link>
+                </div>
+                </div></div>
+            
+            </div>
+            <button @click="show = !show" class="modal-close is-large" aria-label="close"></button>
+      </div>
     </div>
 
 </template>
 
 <script>
-//import modal_1 from "../components/modal_1"
 export default {
-  data () {
-      return {
-        text: "aaaaaaaaaaaa",
-        naslov:"",
-        slika:require("../assets/pozadina.jpg") 
-      }
-},
+    data() {
+        return {
+            show: false,
+            text1: "",
+            text2: "",
+            text3: "",
+            naslov:"",
+            slika:""
+        }
+    },
     methods:{
-    show () {
-      this.$modal.show('modalPrvi');
-      }
+        prvaSlika(){
+        this.text1= "Internacionalni sajam pršuta ISAP se od 2006. godine, kada se Općina Tinjan proglasila Općinom istarskog pršuta, redovno održava u Tinjanu trećeg vikenda u listopadu. Jedna je od najvažnijih turističkih i gospodarskih manifestacija središnje Istre koju godišnje posjeti više od 25.000 ljudi.";
+        this.text2= "Svake godine se najuspješnijim pršutarima dodjeljuju plakete i priznanja za kvalitetu njihovih proizvoda te se proglašava i šampion sajma, a sve temeljem ocjene stručne komisije koju čine senzorni analitičari pršuta, članovi Udruge senzornih analitičara pršuta - GUSTUS osnovane u Tinjanu 2010. godine. ";
+        this.text3="Specifičnost gastronomske ponude manifestacije ISAP ogleda se u mogućnosti da se u isto vrijeme na jednom mjestu nađu pršuti iz svih krajeva svijeta i da se mogu kušati, uspoređivati i valorizirati.  Osim gastro ponude, koja se ne sastoji samo od pršuta i suhomesnatih proizvoda kao najvažnijeg dijela manifestacije, već i od niz drugih gastro proizvoda (sir, maslinovo ulje, vino, voće te proizvodi od voća i povrća, suveniri…) koji se nude na mnogobrojnim štandovima tijekom ISAP-a u Tinjanu.  Nezaobilazni zabavni sadržaj ISAP-a je i organizacija mnogobrojnih koncerata poznatih glazbenih izvođača sa hrvatskog područja i izvan njega.";
+        this.naslov="Što je ISAP?";
+        this.slika=require("../assets/JPEG/isap.jpg") ;
+        },
+        drugaSlika(){
+        this.text1= "Istarski pršut je trajni suhomesnati proizvod, obrađen na istarski način sa i bez zdjeličnih kosti, suho salamuren morskom soli i prirodnim mirodijama, sušen na zraku i bez dimljenja.";
+        this.text2= "Prirodni uvjeti Istre Istarski pršut se najviše proizvodi u unutrašnjosti istarskog poluotoka, gdje klimatski uvjeti omogućuju soljenje mesa i proizvodnju pršuta samo tijekom zimskih mjeseci. Dobar pokazatelj klimatskih prilika kakve vladaju u središnjem dijelu Istre služi šire područje Pazina. Prema podacima Državnog Hidrometeorološkog Zavoda, srednje vrijednosti temperatura i relativne vlage zraka od prosinca do ožujka pogoduju optimalnom prirodnom sušenju mesa. Početna niska temperatura(3-4 stupnja Celzija) i postepen pad relativne vlažnosti zraka(65-70%), omogućavaju pravilan proces sušenja i zrenja pršuta. Dolaskom proljeća i toplijih dana, pršuti se premještaju na zrenje u podrumske prostorije gdje je sada optimalna temperatura zraka 13-15 stupnjeva Celzija i stabilna vlažnost zraka od 65-70 %. Istarsku klimu karakteriziraju vjetrovi koji pogoduju sušenju pršuta. Prema podacima Državnog Hidrometeorološkog Zavoda u središnjem dijelu Istre u razdoblju l989 – l998 godine je bilo svega 11% dana bez vjetra. U središnjem dijelu Istre najčešće puše vjetar sa istoka i jugoistoka te južni vjetrovi. Za pravilno sušenje i zrenje pršuta te stvaranje prirodnih uvjeta, najzaslužniji su vjetrovi sjevernog i sjeveroistočnog smjera te istočni vjetar sa Učke. Prirodni uvjeti Istre pružaju idealno okruženje za tradicionalnu proizvodnju istarskog pršuta, jer zbog utjecaja mediteranske klime izostaju ekstremno niske temperature, a područje hlade česti vjetrovi.";
+        this.text3="Tehnologija Istarskog pršuta Primarna obrada buta je jedinstvena, jer se istarski pršut tradicionalno obrađuje sa zdjeličnim kostima. Na butu ostaju kosti kukovlja, odnosno bočna kost(os ilium), sjedna kost (os ischii) i preponska kost (os pubis),a odstranjuje se samo križna kost (os sacrum) i repni kralješci (vertebrae caudales). Nogica se odstranjuje u skočnom zglobu (articulus tarsi),tako da u vezi sa potkoljenicom (tibia i fibula) ostaje proksimalni red skočnih kosti (talus i calcaneus).S vanjske (lateralne) strane i unutarnje (medialne) strane buta odstranjuje se koža s potkožnim masnim tkivom do visine cca l0 cm proksimalno od skočnog zgloba. Ovako obrađeni butovi imaju karakterističan dugi izgled i otvorenu površinu.";
+        this.naslov="Zašto pršut?";
+        this.slika=require("../assets/JPEG/isap_prsut.jpg") ;
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-#modal-slika{
-  width:100%;
-}
-.size-modal-content {
-    padding: 10px;
-    font-style: 13px;
-    font-size: 3rem;
-}
-.v--modal-overlay[data-modal="size-modal"] {
-    background: rgba(0, 0, 0, 0.5);
-}
-main h3{
-    padding: 5rem;
-}
+
 .sponzori img {
-    filter: grayscale(100%);
+    display: block;
+    margin: auto;
+}
+.sponzori{
+    padding-top: 5rem;
 }
 nav{
     padding-top: 1em;
@@ -217,5 +235,4 @@ nav{
     left:0;
     right:0;
 }
-    
 </style>
