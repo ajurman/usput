@@ -9,20 +9,20 @@
       </div>
       <nav class="tabs is-centered is-size-4" aria-label="breadcrumbs">
           <ul>
-        <li><router-link to="/"  class="has-text-white nav-link">Početna</router-link></li>
-        <li><router-link to="/galerija"  class="has-text-white nav-link">Galerija</router-link></li>
-        <li><router-link to="/lokacija"  class="has-text-white nav-link">Lokacija</router-link></li>
-        <li ><router-link to="/kontakt"  class="has-text-white nav-link" >Kontakt</router-link></li>
+        <li><router-link to="/"  class="has-text-white is-size-2 nav-link">Početna</router-link></li>
+        <li><router-link to="/galerija"  class="has-text-white is-size-2 nav-link">Galerija</router-link></li>
+        <li><router-link to="/lokacija"  class="has-text-white is-size-2 nav-link">Lokacija</router-link></li>
+        <li ><router-link to="/kontakt"  class="has-text-white is-size-2 nav-link" >Kontakt</router-link></li>
           </ul>
       </nav>
       <div class="navbar-cta">
-        <router-link to="/lokacija" class="navbar-item">
+        <router-link to="/lokacija">
           <button class="cta button is-medium">POSJETI ISAP</button>
         </router-link>
       </div>
     </div>
       <router-view/>
-      <section class="footer is-medium">
+      <section class="footer bg-tamna is-medium">
         <div class="container">
           <div class="columns">
             <div class="column has-text-left redText">
