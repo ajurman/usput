@@ -1,29 +1,29 @@
 $crvena : #fd1c15;
-$tamnija : rgb(49, 49, 49);
-$svjetlija : rgb(199, 199, 199);
-
+$tamnija : rgb(49,49,49);
+$svjetlija : rgb(235, 235, 235);
+@import url('https://fonts.googleapis.com/css?family=Lora|Merriweather&display=swap');
   
 #app {
-	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	font-family: 'Merriweather', serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	position: relative;
-	color:white;
+	color:$svjetlija;
+	background-color: $tamnija;
 	
 }
-
-.hr{
-	border: 1px solid red;
+.svjetliji{
+	background-color : $svjetlija !important;
+	color:$tamnija;
 }
+
 .v-centar{
 	position: absolute;
-	top:55%;
-	margin-left: 10vw;
+	top:60%;
+	left: 10vw;
 }
 .cta {
-	z-index: 132;
-	margin-top: 34px;
-	margin-right: 34px;
+	z-index: 10;
 	position: relative;
 	color: white !important;
 	width: 156px;
@@ -39,6 +39,9 @@ $svjetlija : rgb(199, 199, 199);
 .cta:hover {
 	transform: scale(1.1);
 }
+h4 {
+	font-family: 'Lora', serif;
+}
 .sponzori h4{
 	font-size:2.5rem;
 	padding:5rem;
@@ -46,22 +49,23 @@ $svjetlija : rgb(199, 199, 199);
 .drugi{
 	padding-top: 5rem;
 }
-.vh-100{
-	height:100vh;
-}
-.vh-50 {
-height: 40vh;
-}
+
 
 .pomoc{
 	margin-right: 0px;
 }
 
-.red {
-	background-color: $crvena;
+.white {
+	background-color: $svjetlija;
 }
 .redText {
 	color: $crvena !important;
+}
+.futer {
+	padding:4rem 4rem 0;
+	p {
+		padding:1rem;
+	}
 }
 .bg-tamna{
 	background-color: $tamnija !important;
@@ -99,18 +103,11 @@ video {
 	text-align: center;   
 	font-size: 3rem !important;
 	background: rgba(0, 0, 0, 0.7);
-	h4{
-		line-height: 0;
-		}
-	button {
-		margin-top: 15%;
-	}
 }
 
 
 .heading{
 	font-size: 2.5rem !important;
-	padding:3rem;
 }
 .title {
 	
@@ -118,18 +115,17 @@ video {
 }
 
 main{
-	font-family: 'Montserrat', serif;
 	z-index: 120;
-	background-color: $tamnija;
+	
 }
 .crtica{
 	position: absolute;
     left: 50%;
     right: 50%;
     top: 100%;
-    margin: -100px 0 0 -1px;
+    margin: -75px 0 0 -1px;
     width: 2px;
-    height: 200px;
+    height: 150px;
     content: "";
 	background: $crvena;
 	z-index: 121;
@@ -138,10 +134,98 @@ main{
 	display: flex;
 	align-items: center;
   }
-
+@media(min-width:1235px){
+.brojke .margine{
+	margin-left: -150px;
+}
+.brojke .desni{
+	margin-right: -150px;
+	margin-bottom: -500px;
+	p{
+		width:700px;
+	}
+}
+}
+  .brojke .margine{
+	margin-left: 0;
+}
+.brojke .okrugli{
+	background: #4e4e4e;
+	padding-bottom: 1rem;	 
+}
+.brojke .is-1{
+	order: 0;
+}
+.brojke .columns{
+	background-color: #313131;
+	padding-bottom: 10rem;
+}
+.brojke .column{
+	position: relative;
+}
+.brojke .lijevi{
+	order:4;	
+}
+.brojke .prazni{
+	order: 6;
+	background-color: #313131;
+}
+.brojke .desni{
+	z-index: 100;
+	margin-right: 0;
+	margin-bottom: 0;
+	order:2;
+	line-height: 50px;
+	
+	
+	p{
+		margin:0 auto;
+		width:auto;
+		line-height: 50px;
+	}
+	div{
+		
+		background-color: #a3a3a36b;
+		padding:0.5rem;
+	}
+}
+.brojke .centar{
+	display: flex;
+	align-items: center;
+}
 //DESKTOP
 
 @media(min-width:769px){
+	//brojke
+	.brojke .margine{
+		margin-left: -200px;
+	}
+	.brojke .okrugli{
+		padding-bottom: 3rem;
+
+	}
+	.brojke .columns{
+		padding-bottom: 18rem;
+	}
+
+	.brojke .desni{
+		margin-right: -200px;
+		margin-bottom: -450px;
+		order:2;
+		line-height: 50px;
+		p{
+			margin:0 auto;
+			width:550px;
+			line-height: 50px;
+		}
+		div{
+			padding:1rem;
+		}
+	}
+	
+
+
+
 	//Sto je isap
 	#gradient{
 		
@@ -150,7 +234,7 @@ main{
 		right:0;
 		top: 0;
 		bottom:0;
-		z-index: 13;
+		z-index: 3;
 		background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(255, 255, 255, 0));
 	}
 	.probajte {
@@ -167,19 +251,29 @@ main{
 		position: absolute;
 		line-height: 40vh;
 		font-size: 4rem;
-		z-index: 14;
+		z-index: 4;
 		margin-left: 10vw;
 	}
 	.mdi {
-		font-size: 148px;
+		font-size: 100px;
 	}
-	#brojke{
-		padding:20rem 0;
-		font-size: 8rem;
-	}
+	
+	.deepshadow {
+		font-family: 'Lora', serif;
+		padding:10rem;
+		line-height: 170px;
+		font-size: 6rem;
+		text-transform: uppercase;
+		color: $svjetlija;
+		background-color: $tamnija;
+		letter-spacing: .1em;
+		text-shadow: 
+			-1px -1px 1px #111, 
+			2px 2px 1px #363636;
+	  }
 
 	.is-1-mobile{
-		padding-bottom: 15rem;
+		padding-bottom: 2rem;
 	}
 	.vh-50 {
 		height: 40vh;
@@ -187,13 +281,12 @@ main{
 		}
 
 	main{
-		padding: 15rem 0 0;
+		padding: 10rem 0 0;
 	}
 	.text-slika {
 		height: 0;
 		transition: height 0.7s ease-out;
 		button {
-			margin-top: 15%;
 			opacity: 0;
 			transition: opacity 0.2s ease-in 0.2s;
 		}
@@ -270,10 +363,11 @@ main{
 		left:2rem;
 	}
 	.navbar-cta{
+		
 		z-index: 103;
-		top: 1rem;
+		top: 2rem;
 		position: absolute;
-		right:2rem;
+		right:4rem;
 	}
 	.navbar-wrap{
 		position: relative;
@@ -307,12 +401,11 @@ main{
 		padding-right: 5rem;
 		h1 {
 			color:$crvena;
-			font-size: 4rem;
-			font-family: "Montserrat" "bold";
+			font-size: 3.2rem;
+			font-family: 'Lora', serif;
 		}
 		h2 {
-			font-size: 2rem;
-			font-family: "Arial";
+			font-size: 1.5rem;
 		}
 	}
 	#overlay {
@@ -325,12 +418,12 @@ main{
 	#bocno{
         z-index: 100;
         position: absolute;
-        right: -250px;
+        right: -140px;
         top:50vh;
         transform: rotate(-90deg);
-        font-size: 2rem;
+        font-size: 1.5rem;
         a {
-            padding-left: 7rem;
+            padding-left: 4rem;
      
         }
     }
@@ -367,6 +460,7 @@ main{
 //modal
 
 .modal {
+	z-index: 200;
 	color:black;
   }
   .modal img{
@@ -418,8 +512,12 @@ main{
   .modal .cta{
 	float: right;
   }
-  @media(min-width:815px){ 
-	 .text-slika {
-		 font-size: 5rem !important;
-	 }
+  @media(min-width:1015px){ 
+	 .text-slika	h4{
+		line-height: 0;
+		}
 	}
+.is-invisible-cta {
+	visibility: hidden;
+}
+////////brojke
