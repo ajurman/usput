@@ -8,10 +8,10 @@
             </div>
             <nav class="tabs is-centered is-size-4" aria-label="breadcrumbs">
                     <ul>
-                    <li><router-link to="/"  class="has-text-white is-size-2 nav-link">Početna</router-link></li>
-                    <li><router-link to="/galerija"  class="has-text-white is-size-2 nav-link">Galerija</router-link></li>
-                    <li><router-link to="/lokacija"  class="has-text-white is-size-2 nav-link">Lokacija</router-link></li>
-                    <li ><router-link to="/kontakt"  class="has-text-white is-size-2 nav-link">Kontakt</router-link></li>
+                    <li><router-link to="/"  class="has-text-white is-size-4 nav-link">Početna</router-link></li>
+                    <li><router-link to="/galerija"  class="has-text-white is-size-4 nav-link">Galerija</router-link></li>
+                    <li><router-link to="/lokacija"  class="has-text-white is-size-4 nav-link">Lokacija</router-link></li>
+                    <li ><router-link to="/kontakt"  class="has-text-white is-size-4 nav-link">Kontakt</router-link></li>
                     </ul>
                 </nav>
             <div class="navbar-cta">
@@ -40,18 +40,14 @@
         </header>
         
         <main>
-
-
-
             <section>
-                <div>
-                    
+                <div> 
                     <div class="columns is-variable is-0">
                         <div class="column">
-                            <div class="vh-50 pomoc slika-text">
+                            <div class="vh-50 slika-text">
                                 <div class="text-slika">
-                                    <h4>Što je ISAP?</h4>
-                                    <button class="button cta is-large" @click="show = !show; prvaSlika()">Saznaj više</button>
+                                    <h4>Što je ISAP?</h4><br>
+                                    <button class="button cta is-large" :class="{'is-invisible-cta':showCta }" @click="show = !show; prvaSlika(); showCta = !showCta">Saznaj više</button>
 
                                 </div>
                             </div>
@@ -59,112 +55,46 @@
                         <div class="column">
                             <div class="vh-50 slika-text">
                                 <div class="text-slika">
-                                    <h4>Zašto pršut?</h4>
-                                    <button class="button cta is-large"  @click="show = !show; drugaSlika()">Saznaj više</button>
+                                    <h4>Zašto pršut?</h4><br>
+                                    <button class="button cta is-large" :class="{'is-invisible-cta':showCta }" @click="show = !show; drugaSlika(); showCta = !showCta">Saznaj više</button>
                                 </div>
                             </div>
-                        </div>   
-                        
+                        </div>        
                     </div>
                 </div>
-                <div class="grad1 has-text-centered">
-                    <h3 id="brojke"><hr class="hr">ISAP 2019. u brojkama</h3>
-                    <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
-                        <div class="brojevi column has-text-centered ">
-                            <div>
-                                <span class="icon is-large">
-                                    <i class="mdi mdi-format-list-numbered "></i>
-                                </span>
-                                <p class="heading">Po redu</p>
-                                <p class="title redText">13.</p>
-                            </div>
-                        </div>
-                        <div class="brojevi column has-text-centered ">
-                            <div>
-                                <span class="icon is-large">
-                                    <i class="mdi mdi-weight-kilogram"></i>
-                                </span>
-                                <p class="heading">Pršuta pojedeno u tonama</p>
-                                <p class="title redText">20+</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
-                         <div class="brojevi column has-text-centered ">
-                            <div>
-                                <span class="icon is-large">
-                                    <i class="mdi mdi-account-group"></i>
-                                </span>
-                                <p class="heading">Posjetitelja</p>
-                                <p class="title redText">30.000+</p>
-                            </div>
-                        </div>
-                        <div class="brojevi column has-text-centered ">
-                            <div>
-                                <span class="icon is-large">
-                                    <i class="mdi mdi-account-badge"></i>
-                                </span>
-                                <p class="heading">Natjecatelja</p>
-                                <p class="title redText">81</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="deepshadow has-text-centered">ISAP 2019. u brojkama</h3>
+            <brojke/>
             </section>
             <section>
                 <article class="bg-tamna">  
+
+
                     <div class="probajte">
-                        <h3 id="probajte">Probajte pršut i Vi</h3>
+                        <h4 id="probajte">I Vi zaslužujete uživati</h4>
                         <div id="gradient"></div>
                         <div class="v-centar">
+                            <br>
                             <router-link to="/lokacija">
-                                <button class="cta button is-medium">POSJETI ISAP</button>
+                                <button class="cta button is-medium" :class="{'is-invisible-cta':showCta }">POSJETI ISAP</button>
                             </router-link>
                         </div>
                         
                     </div>
-                        
-                        
-                        
-                        <div class="container has-background-white sponzori">
-                            <h4 class="has-text-black has-text-centered">SPONZORI</h4>
-                            <div class="columns is-vertical-center is-mobile">
-                                    <div class="column"><img src="../assets/JPEG/sponzor1.jpg" alt="GhiaStaff"></div>
-                                    <div class="column"><img src="../assets/JPEG/sponzor2.jpg" alt="Rudan"></div>
-                            </div>
-                            <h4 class="has-text-black has-text-centered">POKROVITELJI I POTPORE</h4>
-                            <div class="columns is-mobile is-vertical-center">
-                                    <div class="column"><img src="../assets/JPEG/potpore2.jpg" alt="Ministarstco turizma"> </div>
-                                    <div class="column"><img src="../assets/JPEG/potpore3.jpg" alt="Ministarstvo poljoprivrede"></div>
-                            </div>
-                            <div class="columns is-mobile drugi is-vertical-center">
-                                <div class="column"><img src="../assets/JPEG/potpore5.jpg" alt="Središnja Istra"></div>
-                                <div class="column"><img src="../assets/JPEG/potpore1.jpg" alt="Istra"></div>
-                                <div class="column"><img src="../assets/JPEG/potpore4.jpg" alt="Istra"></div>
-                            </div>
-                            <h4 class="has-text-black has-text-centered">ORGANIZATORI</h4>
-                            <div class="columns is-mobile is-vertical-center">
-                                <div class="column"><img src="../assets/JPEG/organizator1.jpg" alt="GUSTUS"></div> 
-                                <div class="column"><img src="../assets/JPEG/potpore6.jpg" alt="Središnja Istra"></div>    
-                                <div class="column"><img src="../assets/JPEG/organizator2.jpg" alt="Tinjan"></div>
-                            </div>
-                            <div class="columns is-mobile drugi is-vertical-center">
-                                <div class="column"><img src="../assets/JPEG/organizator3.jpg" alt="Istarski Pršut"></div>
-                                <div class="column"><img src="../assets/JPEG/organizator4.jpg" alt="Merikane"></div>  
-                            </div>
-                            
-                        </div>
+                    <sponzori/>
                 </article>
             </section>
         </main>
+
+        <!--MODAL-->
+
         <div class="modal" :class="{ 'is-active':show }">
-            <div class="modal-background" @click="show = !show"></div>
-            <div class="modal-content container">
+            <div class="modal-background" @click="show = !show; showCta = !showCta"></div>
+            <div class="modal-content  container">
             
             <div class="columns">
                 <div class="column">
                     <img v-bind:src="slika" >
-                    <div class="naslov-modal is-size-1">{{naslov}}</div>
+                    <h4 class="naslov-modal is-size-1">{{naslov}}</h4>
                 </div>
                 </div>
                 
@@ -177,19 +107,22 @@
                     {{text3}}<br><br><br>
                     </p>
                     <router-link to="/lokacija">
-                    <button class="is-large cta button" >POSJETI ISAP</button>
+                    <button class="is-medium cta button" >POSJETI ISAP</button>
                     </router-link>
                 </div>
                 </div></div>
             
             </div>
-            <button @click="show = !show" class="modal-close is-large" aria-label="close"></button>
-      </div>
+            <button @click="show = !show; showCta = !showCta" class="modal-close is-large" aria-label="close"></button>
+         </div>
+
     </div>
 
 </template>
 
 <script>
+import brojke from "../components/brojke.vue"
+import sponzori from "../components/sponzori.vue"
 export default {
     data() {
         return {
@@ -198,8 +131,13 @@ export default {
             text2: "",
             text3: "",
             naslov:"",
-            slika:""
+            slika:"",
+            showCta: false,
         }
+    },
+    components:{
+            brojke,
+            sponzori
     },
     methods:{
         prvaSlika(){
@@ -222,13 +160,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.sponzori img {
-    display: block;
-    margin: auto;
-}
-.sponzori{
-    padding-top: 5rem;
-}
+
 nav{
     padding-top: 1em;
     position: absolute;
