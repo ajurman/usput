@@ -5,6 +5,7 @@ import galerija from '../views/galerija.vue'
 import lokacija from '../views/lokacija.vue'
 import kontakt from '../views/kontakt.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [
