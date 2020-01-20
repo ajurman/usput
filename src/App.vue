@@ -9,10 +9,10 @@
       </div>
       <nav class="tabs is-centered is-size-4" aria-label="breadcrumbs">
           <ul>
-        <li><router-link to="/"  class="has-text-white is-size-2 nav-link">Početna</router-link></li>
-        <li><router-link to="/galerija"  class="has-text-white is-size-2 nav-link">Galerija</router-link></li>
-        <li><router-link to="/lokacija"  class="has-text-white is-size-2 nav-link">Lokacija</router-link></li>
-        <li ><router-link to="/kontakt"  class="has-text-white is-size-2 nav-link" >Kontakt</router-link></li>
+        <li><router-link to="/"  class="has-text-white is-size-4 nav-link">Početna</router-link></li>
+        <li><router-link to="/galerija"  class="has-text-white is-size-4 nav-link">Galerija</router-link></li>
+        <li><router-link to="/lokacija"  class="has-text-white is-size-4 nav-link">Lokacija</router-link></li>
+        <li ><router-link to="/kontakt"  class="has-text-white is-size-4 nav-link" >Kontakt</router-link></li>
           </ul>
       </nav>
       <div class="navbar-cta">
@@ -22,25 +22,16 @@
       </div>
     </div>
       <router-view/>
-      <section class="footer bg-tamna is-medium">
-        <div class="container">
-          <div class="columns">
-            <div class="column has-text-left redText">
-              <p>Adresa</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="column">
-            </div>
-            <div class="column">
-            </div>
-            <div class="column has-text-right redText">
-              <p>Kontakt</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <button>social media</button>
-            </div>
-          </div>
+      <section class="bg-tamna">
+        <div class="container futer">
           <hr>
-          copyright
+          <div class="columns">
+             <div class="column is-half is-offset-one-quarter has-text-centered">
+               <p><b>Anthony Jurman</b></p>
+               <p>Tehničko veleučilište u Zagrebu</p>
+               <p>2019./2020.</p>
+             </div>
+          </div>
         </div>
       </section>
     </div>
@@ -50,9 +41,3 @@
 @import "assets/scss/main.scss";
 
 </style>
-<script>
-export default {
-  methods: {
-  }
-}
-</script>
