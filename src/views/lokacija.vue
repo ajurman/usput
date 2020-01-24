@@ -4,7 +4,7 @@
             <div>
                 <div class="container lokacija-tekst">
                 <h1 class="title">
-                    Tinjan
+                    Tinjan - Grad ISAP-a
                 </h1>
                 <h5>
                     Nalazi se u centralnom dijelu središnje Istre, na prostoru zapadne strane Drage.Tinjan ponosno čuva svoju povijest i tradiciju, bilo da je riječ o simbolima ovog kraja, kamenom suhozidu i lokvama te kosirima i rankunima, folklornom i graditeljskom nasljeđu, predaji i legendama ili pak o vrhunskim gastronomskim delicijama poput istarskog pršuta. Za očuvanje tradicije proizvodnje vrhunskog pršuta na Tinjanštini danas je zaslužno nekoliko registriranih pršutana, a 2006. godine Tinjan je proglašen Općinom istarskog pršuta.
@@ -12,7 +12,7 @@
                 </div>
             </div>
         <div class="container razmak">
-            <div class="columns is-gapless has-background-light">
+            <div class="columns is-gapless has-background-white">
                 <div class="column">
                     <GmapMap
                     :center="center"
@@ -76,8 +76,6 @@ section {
 }
 
 h5, h1 {
-    padding-top:1rem;
-    line-height: 30px;
     color:rgb(228, 228, 228);
 }
 .crta-siva{
@@ -86,7 +84,6 @@ h5, h1 {
 
 }
 .lokacija-tekst{
-    min-height: 30vh;
     z-index: 10;
     margin-top: -100px;
     padding:3rem !important;
