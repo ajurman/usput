@@ -4,20 +4,20 @@
       class="navbar-wrap">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item">
-          <img src="logo.png" alt="logo">
+          <img src="./assets/logo.png" alt="logo">
         </router-link>
       </div>
       <nav class="tabs is-centered is-size-4" aria-label="breadcrumbs">
           <ul>
-        <li><router-link to="/"  class="has-text-white is-size-4 nav-link">Početna</router-link></li>
-        <li><router-link to="/galerija"  class="has-text-white is-size-4 nav-link">Galerija</router-link></li>
-        <li><router-link to="/lokacija"  class="has-text-white is-size-4 nav-link">Lokacija</router-link></li>
-        <li ><router-link to="/kontakt"  class="has-text-white is-size-4 nav-link" >Kontakt</router-link></li>
+        <li><router-link to="/"  class="has-text-white is-size-6 nav-link">Početna</router-link></li>
+        <li><router-link to="/galerija"  class="has-text-white is-size-6 nav-link">Galerija</router-link></li>
+        <li><router-link to="/lokacija"  class="has-text-white is-size-6 nav-link">Lokacija</router-link></li>
+        <li ><router-link to="/kontakt"  class="has-text-white is-size-6 nav-link" >Kontakt</router-link></li>
           </ul>
       </nav>
       <div class="navbar-cta">
         <router-link to="/lokacija">
-          <button class="cta button is-medium">POSJETI ISAP</button>
+          <button class="cta button ">POSJETI ISAP</button>
         </router-link>
       </div>
     </div>
