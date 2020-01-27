@@ -82,7 +82,7 @@
                 </form>
                 <b-modal :active.sync="isModalActive" :width="640" scroll="keep">
                     <div class="has-background-white">
-                        <i class="mdi mdi-check"></i>
+                        <i class="mdi mdi-check mdi-48px"></i>
                         <h4 class="is-size-2">Upit je uspješno poslan!</h4>
                     </div>
                 </b-modal>
