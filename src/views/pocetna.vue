@@ -41,7 +41,8 @@
         
         <main>
             <section>
-                <div> 
+                <div>
+                    <div id="logo-pozadina"><div id="veliki-logo"></div></div>
                     <div class="columns is-variable is-0">
                         <div class="column">
                             <div class="vh-50 slika-text">
