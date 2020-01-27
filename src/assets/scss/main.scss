@@ -20,7 +20,6 @@ $svjetlija : rgb(235, 235, 235);
 
 //brojke
 .card-naslov{
-	
 	#pomak{
 	display: inline-block;
 	line-height: 3rem;
@@ -112,14 +111,84 @@ nav {
 }
 
 
-//kraj nav
+//spozori 
 
-
-.v-centar{
-	position: absolute;
-	left: 10vw;
-	top:60%;
+.sponzori h4{
+	font-size:2.5rem;
+	padding:5rem;
 }
+.drugi-sponzori {
+	padding-top: 5rem;
+}
+
+
+.white-sponzori {
+	background-color: $svjetlija;
+}
+
+
+//LOKACIJA
+
+
+.lokacija .slika {
+	width: 100%;
+	height:50vh;
+}
+.lokacija .razmak{
+	margin: 5rem auto;
+}
+$siva : rgb(97, 97, 97);
+
+.lokacija section {
+	width: 100%;
+	margin-bottom: 3rem;
+
+}
+.lokacija j.slika {
+	background-image: url("assets/JPEG/Tinjan.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.lokacija h5,.lokacija  h1 {
+	color:rgb(228, 228, 228);
+}
+.crta-siva{
+	height:50px;
+	background-color:$siva;
+
+}
+.lokacija-tekst{
+	z-index: 10;
+	margin-top: -100px;
+	padding:3rem !important;
+	background-color:$siva;
+}
+.lokacija .is-4 {
+	color:$siva;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	p {
+		padding:1rem;
+	}
+	h6 {
+		padding: 1.5rem;
+	}
+	i {
+		padding-top: 1rem;
+	}
+}
+.vue-map-container {
+	height: 450px;
+	max-width: 992px;
+	width: 100%;
+}
+
+
+//razno
+
 .cta {
 	z-index: 10;
 	position: relative;
@@ -137,25 +206,7 @@ nav {
 .cta:hover {
 	transform: scale(1.1);
 }
-h4 {
-	font-family: 'Bebas Neue', cursive;
-}
-.sponzori h4{
-	font-size:2.5rem;
-	padding:5rem;
-}
-.drugi{
-	padding-top: 5rem;
-}
 
-
-.pomoc{
-	margin-right: 0px;
-}
-
-.white {
-	background-color: $svjetlija;
-}
 .redText {
 	color: $crvena !important;
 }
@@ -168,12 +219,46 @@ h4 {
 .bg-tamna{
 	background-color: $tamnija !important;
 }
+.is-invisible-cta {
+	visibility: hidden;
+}
 
-//POČETNA
+
+.title {
+	
+	font-size: 4rem !important;
+}
+.crtica{
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	top: 100%;
+	margin: -75px 0 0 -1px;
+	width: 2px;
+	height: 150px;
+	content: "";
+	background: $crvena;
+	z-index: 121;
+}
+.is-vertical-center {
+	display: flex;
+	align-items: center;
+	}
+
 
 //POČETNA
 //što je isap
-
+#veliki-logo{
+	background-image:url("assets/JPEG/isap_logo_veliki.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width:100vw;
+	height: 30vw;
+	background-color: white;
+	
+	margin: 4rem auto;
+}
 
 .slika-text {
 	background-image:url("assets/JPEG/isap.jpg");
@@ -192,37 +277,26 @@ h4 {
 	text-align: center;   
 	font-size: 3rem !important;
 	background: rgba(0, 0, 0, 0.7);
+	height: 0;
+	transition: height 0.7s ease-out;
+	button {
+		opacity: 0;
+		transition: opacity 0.2s ease-in 0.2s;
+	}
+}
+.slika-text:hover > .text-slika {
+	height: 50%;
+}
+.slika-text:hover > .text-slika button {
+	opacity:1;
+}
+.text-slika	h4{
+	line-height: 0;
 }
 
-
-.heading{
-	font-size: 2.5rem !important;
+h4 {
+	font-family: 'Bebas Neue', cursive;
 }
-.title {
-	
-	font-size: 4rem !important;
-}
-
-main{
-	z-index: 120;
-	
-}
-.crtica{
-	position: absolute;
-    left: 50%;
-    right: 50%;
-    top: 100%;
-    margin: -75px 0 0 -1px;
-    width: 2px;
-    height: 150px;
-    content: "";
-	background: $crvena;
-	z-index: 121;
-}
-.is-vertical-center {
-	display: flex;
-	align-items: center;
-  }
 /*@media(min-width:1235px){
 
 	.brojke .desni{
@@ -301,7 +375,8 @@ main{
 	}
 }
 */
-//Sto je isap
+//CTA uzivajte 
+
 #gradient{
 	
 	position: absolute;
@@ -324,15 +399,21 @@ main{
 }
 #probajte {
 	position: absolute;
-	line-height: 40vh;
 	z-index: 4;
-	margin-left: 10vw;
+	left: 10vw;
+	top:40%;
 }
 
+.v-centar{
+	position: absolute;
+	left: 10vw;
+	top:55%;
+}
+
+//slova velika
 
 .deepshadow {
-	font-family: 'Bebas Neue', cursive;
-	padding:7rem 0;
+	padding:5rem 0;
 	line-height: calc(4rem * 1.3);
 	font-size: 4rem;
 	text-transform: uppercase;
@@ -342,33 +423,18 @@ main{
 	text-shadow: 
 		-1px -1px 1px #111, 
 		2px 2px 1px #363636;
-	}
-
-.is-1-mobile{
-	padding-bottom: 2rem;
 }
+
+
 .vh-50 {
 	height: 40vh;
 	margin-bottom: 3rem;
 	}
 
 main{
-	padding: 10rem 0 0;
+	padding: 2rem 0 0;
 }
-.text-slika {
-	height: 0;
-	transition: height 0.7s ease-out;
-	button {
-		opacity: 0;
-		transition: opacity 0.2s ease-in 0.2s;
-	}
-}
-.slika-text:hover > .text-slika {
-	height: 50%;
-}
-.slika-text:hover > .text-slika button {
-	opacity:1;
-}
+
 
 
 	
@@ -378,10 +444,6 @@ main{
 video {
 	visibility: inherit;
 }
-#pozadina-slika {
-	display:none;
-}
-
 .video-background{
 	position: absolute;
 	right: 0;
@@ -485,10 +547,3 @@ color: crimson;
 float: right;
 margin-right: 2rem;
 }
-.text-slika	h4{
-		line-height: 0;
-		}
-.is-invisible-cta {
-	visibility: hidden;
-}
-////////brojke
