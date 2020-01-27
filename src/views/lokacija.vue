@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="lokacija">
         <section class="slika"></section>
             <div>
                 <div class="container lokacija-tekst">
@@ -28,10 +28,11 @@
                 </div>
                 <div class="column is-4">
                     <div class="crta-siva"></div>
-                    <i class="mdi mdi-google-maps "></i>
+                    <i class="mdi mdi-google-maps mdi-48px"></i>
                     <h6 class="is-size-3">Lokacija</h6>
                     <p><b>lat</b> 45.2176</p>
-                    <p><b>lng</b> 13.8369 </p>
+                    <p><b>lng</b> 13.8369 </p><br>
+                    <p>Tinjan, Istra, Hrvatska </p>
                 </div>
             </div>
         </div>
